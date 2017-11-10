@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Help center</title>
+
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+  <script src="assets/js/jquery.equalheights.js"></script>
+  <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
+  <script src="assets/js/scotchPanels.js"></script> 
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700" rel="stylesheet"> 
+   
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="assets/css/flag-icon.min.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.dark.min.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<a href="#" class="get-help btn">Get Help</a>
+<div class="overlay"></div>
+<!--========================================================
+                              HEADER
+=========================================================--> 
+
+  <header class="front-header">
+    <div class="header-top clearfix">      
+        <ul class="head_options">
+          <li><a href="#">No Sales Tax</a></li>
+          <li><a href="#">Great Rates</a></li>
+          <li><a href="#">Shopping Assistant</a></li>
+        </ul>
+        <div class="lang_box">
+          <select class="selectpicker">
+            <option data-icon="flag-icon flag-icon-us">English</option>
+            <option data-icon="flag-icon flag-icon-ru">Russian</option>
+            <option data-icon="flag-icon flag-icon-de">German</option>
+            <option data-icon="flag-icon flag-icon-cz">Czech</option>
+            <option data-icon="flag-icon flag-icon-pl">Polish</option>
+            <option data-icon="flag-icon flag-icon-sa">Arabian</option>
+            <option data-icon="flag-icon flag-icon-cn">Chinese</option>
+            <option data-icon="flag-icon flag-icon-es">Spanish</option>
+          </select>
+        </div>        
+        <div class="faq_box"><a href="help-center.html">FAQ &amp; Help Center</a></div>
+    </div>
+    <div class="main-header">
+    <div id="mobile-user">
+      <a href="#" id="user_login"></a>
+    </div>
+      <div class="main-header_inner">
+        <div class="main-header_menu clearfix">
+          <h1 id="logo"><a href="index.html"><img src="assets/images/logo.png" alt="Shipping Storm"><span>Shipping Storm</span></a></h1>
+          <div class="logo-description">Help Center</div>
+          <div class="login_box clearfix">
+            <div class="login_box_wrap">
+              <a id="btnClose" class="sidr-button-close" href="#">Close</a>
+              <a href="#" class="btn">Sign up free</a>
+              <a href="#" class="link6">Log in</a>              
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+</header>
+
+<!--========================================================
+                              CONTENT
+=========================================================-->
+
+<div id="content" class="front-content">
+  <section class="blue faq-box clearfix">
+    <div class="section-inner-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-lg-12">
+            <h2 class="title_front">Submit a ticket</h2>
+            <div class="row">
+              <div class="col-xs-12 col-sm-10 col-md-10 col-lg-8 col-md-offset-1 col-sm-offset-1 col-xs-offset-0 col-lg-offset-2">
+                <div class="form">
+                  <form id="new_request" class="request-form"  method="post">
+                  <input name="utf8" value="✓" type="hidden">
+                  <input name="authenticity_token" value="" type="hidden">
+                  <input name="preview[theme_id]" id="preview_theme_id" value="115001585352" type="hidden">
+                  <input name="preview_as_role" id="preview_as_role" value="anonymous" type="hidden">
+                    <div class="form-field string required request_anonymous_requester_email">
+                      <label for="request_anonymous_requester_email">Your email address</label>
+                      <input name="request[anonymous_requester_email]" id="request_anonymous_requester_email" type="text">
+                    </div>
+                      <div class="form-field string  required  request_subject">
+                        <label for="request_subject">Subject</label>
+                        <input name="request[subject]" id="request_subject" maxlength="150" size="150" type="text">
+                      </div>
+                      <div class="suggestion-list" data-hc-class="searchbox" data-hc-suggestion-list="true"></div>
+                      <div class="form-field text  required  request_description">
+                        <label for="request_description">Description</label>
+                        <textarea name="request[description]" id="request_description"></textarea>  
+                          <p>Please enter the details of your request. A member of our support staff will respond as soon as possible.</p>
+                      </div>
+                      <div class="form-field">
+                        <label>Attachments</label>
+                        <div id="upload-dropzone" class="upload-dropzone">
+                          <input multiple="true" id="request-attachments" data-fileupload="true" data-dropzone="upload-dropzone" data-error="upload-error">
+                          <span>
+                            <a>Add file</a> or drop files here
+                          </span>
+                        </div>
+                        <div id="upload-error" class="notification notification-error notification-inline" style="display: none;">
+                          <span data-upload-error-message=""></span>
+                        </div>
+                        <ul id="request-attachments-pool" class="upload-pool" data-template="upload-template"></ul>
+                      </div>
+                    <footer><input name="commit" value="Submit" type="submit"></footer>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+       </div>
+     </div>
+    </div>      
+  </section>
+</div>
+<!--========================================================
+                              FOOTER
+=========================================================-->
+<footer>
+  <div class="container">
+    <div class="row">  
+      <div class="col-xs-6 col-lg-3 col-sm-3 col-md-3 fln">
+        <h6>Customer Service</h6>
+        <ul class="list1">
+          <li><a href="#">FAQ &amp; Help Center</a></li>
+          <li><a href="#">Returns Policy</a></li>
+          <li><a href="contacts.html">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-6 col-lg-3 col-sm-3 col-md-3 fln">
+        <h6>Useful stuff</h6>
+        <ul class="list1">
+          <li><a href="#">Featured deals</a></li>
+          <li><a href="#">Refer a friend</a></li>
+          <li><a href="#">Understanding volumetric weight</a></li>
+          <li><a href="#">Country guide</a></li>
+          <li><a href="#">Shipping calculator</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-6 col-lg-3 col-sm-3 col-md-3 fln">
+        <h6>About Shipping Storm</h6>
+        <ul class="list1">
+          <li><a href="#">How it works</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">User Reviews</a></li>
+          <li><a href="#">Terms of use</a></li>
+          <li><a href="#">News and Updates</a></li>
+        </ul>
+      </div>      
+      <div class="col-xs-12 col-lg-3 col-sm-3 col-md-3 flr">
+        <h6>Follow us</h6>
+        <ul class="social">
+          <li class="twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li class="facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li class="pinterest"><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+          <li class="instagram"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li class="youtube"><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+        </ul>
+        <div class="copyright">
+          &copy; Shipping Storm 2017
+          <span>All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

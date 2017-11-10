@@ -23,7 +23,6 @@ if ($('#user_login').exists()) {
 	    $.sidr('close', 'sidr-logo');  // close the div with the ID of "sidr"
 	    return false;
 	});
-  //Owl carousel
 
 
 });
