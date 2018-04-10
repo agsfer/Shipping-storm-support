@@ -3350,14 +3350,32 @@ footer {
 					padding: 15px;
 				}
 			}
-			.ger_free_us {
-				.subscribe-form {
-					input {
-						text-align: center;
-						height: 57px;
+			section.get_free_add {
+				padding-bottom: 47px;
+				padding-top: 34px;
+				.ger_free_us {
+					figure {
+						display: none;
+					}
+					h2,
+					.ger_free_us_descr {
+					    padding-right: 0;
+					    text-align: center;
+					}
+					h2 {
+						line-height: 22px;
+						font-size: 22px;
+						margin-bottom: 10px;
+					}
+					.subscribe-form {
+						input {
+							text-align: center;
+							height: 57px;
+						}
+
 					}
 				}
-			}
+			}			
 			.subscribe-form.search_form {
 				.btn {
 				    min-width: 111px;
